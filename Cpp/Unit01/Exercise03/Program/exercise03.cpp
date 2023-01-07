@@ -2,11 +2,15 @@
 #include<fstream>
 
 int main() {
-    std::ifstream indata;
+    // Variable to hold the number
     float num;
-    indata.open("../Unit01/Exercise03/Inputs/input.txt");
 
+    // Reading in the data
+    std::ifstream indata;
+    indata.open("../Unit01/Exercise03/Inputs/input.txt");
     indata>>num;
+
+    // Printing the square of the data
     std::cout<< (num*num);
 
     return 0;

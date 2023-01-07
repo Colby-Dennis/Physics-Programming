@@ -17,4 +17,8 @@
      | -Outputs
  -Rust
 
- ### Note: for Rust, will be using the default file system created by cargo.
+#### How I'm making rust projects.
+* Navigate to the unit folder.
+* Use "cargo new exercise##".
+* Navigate to the new exercise## folder.
+* Create a Makefile that will run the build command and copy the .exe to the bin folder. (Double check all file paths).

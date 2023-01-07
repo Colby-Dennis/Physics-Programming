@@ -3,6 +3,7 @@ program exercise03
 
     real :: input
     
+    ! Reading in the input
     open(1, file="../Unit01/Exercise03/Inputs/input.txt", status = "old")
     read(1,*) input
     close(1)

@@ -46,11 +46,6 @@ The objective of this unit is to get the user familiar with the basics of
     - Create a file called output.txt.
     - Repeat exercise 01.03 but write the program output to the 
         output.txt file.
-    *** CHECK TO SEE WHAT HAPPENS IF THE FILE ALREADY EXISTS.
-        - C++ does ...
-        - Cuda does...
-        - Fortran90 overwrites the old file with the new data.
-        - Rust does ...
 
 * From this point on, each exercise folder is expected to have the
     following structure.
@@ -84,7 +79,15 @@ The objective of this unit is to get the user familiar with the basics of
     - Create a program that reads a number from when the program is
         executed squares it and prints it to an output file.
 
-01.08: Have the program select which input file to use
+01.08: Create a "smart" file path system
+    - Create a program that requires the user to enter the path to
+        the bin folder.
+    - Use this input to construct the paths to both the input files
+        and output files.
+    - Have the program read the input file and print it to an output
+        file.
+
+01.09: Have the program select which input file to use
     - Create five input files called one.txt, two.txt, etc to 
         five.txt that each have the titled number inside.
     - Have the executable take a text input and use the typed input
