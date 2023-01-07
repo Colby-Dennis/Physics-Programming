@@ -1,2 +1,2 @@
 all:
-	g++ -o ../../bin/exer0104 Program/exercise04.cpp
+	g++ -o ../../bin/exer0104 src/exercise04.cpp

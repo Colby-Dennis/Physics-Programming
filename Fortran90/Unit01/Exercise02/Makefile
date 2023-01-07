@@ -1,2 +1,2 @@
 all:
-	gfortran Program/exercise02.f90 -o ../../bin/exer0102
+	gfortran src/exercise02.f90 -o ../../bin/exer0102

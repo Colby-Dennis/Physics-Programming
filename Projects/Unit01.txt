@@ -13,7 +13,7 @@ The objective of this unit is to get the user familiar with the basics of
 
     Unit##
     | -Exercise##
-      | -Program
+      | -src
         | <PROGRAM GOES HERE>
 
 01.01: Compiling Programs
@@ -38,7 +38,7 @@ The objective of this unit is to get the user familiar with the basics of
 
     Unit##
     | -Exercise##
-      | -Program
+      | -src
       | -Inputs
 
 01.04: Creating and writing to an output file.
@@ -52,7 +52,7 @@ The objective of this unit is to get the user familiar with the basics of
 
     Unit##
     | -Exercise##
-      | -Program
+      | -src
       | -Inputs
       | -Outputs
 
