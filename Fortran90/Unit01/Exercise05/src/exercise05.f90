@@ -12,7 +12,8 @@ program exercise05
 
     ! Writing out the hypotenuse
     open(1, file="../Unit01/Exercise05/Outputs/output.txt")
-    write(1,*) sqrt((a*a) + (b*b))
+    write(str,*) "c: ", sqrt((a*a) + (b*b))
+    write(1,*) str
     close(1)
 
 end program exercise05

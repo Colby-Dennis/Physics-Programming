@@ -23,9 +23,16 @@ fn main() {
     // Saving the numbers to variables
     let a: f32 = data_array[0];
     let b: f32 = data_array[1];
+
+    // Calculating hypotenuse, saving as string reference
+    let c: &str = &((a*a) + (b*b)).sqrt().to_string();
+
+    // Creating the output format
+    let mut result: String = String::from("c: ");
+    result.push_str(c);
     
     // Writing out hypotenuse to file
-    fs::write("../Unit01/exercise05/Outputs/output.txt", ((a*a) + (b*b)).sqrt().to_string())
+    fs::write("../Unit01/exercise05/Outputs/output.txt", result)
         .expect("Unable to write to file");
 }
 

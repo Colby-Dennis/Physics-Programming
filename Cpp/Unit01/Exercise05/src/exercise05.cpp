@@ -19,7 +19,7 @@ int main() {
     // writing out the result
     ofstream outdata;
     outdata.open("../Unit01/Exercise05/Outputs/output.txt");
-    outdata<<sqrt((a*a) + (b*b));
+    outdata<<"c: " + to_string(sqrt((a*a) + (b*b)));
     outdata.close();
 
     return 0;
