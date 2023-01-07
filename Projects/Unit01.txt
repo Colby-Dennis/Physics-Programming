@@ -32,6 +32,7 @@ The objective of this unit is to get the user familiar with the basics of
     - Put a single decimal number in the input.txt file.
     - Have the program read from the input.txt file and print out
         the square of the number in the terminal.
+    - Verify results with both whole and decimal numbers.
 
 * Folder should now be structured as followed:
 
