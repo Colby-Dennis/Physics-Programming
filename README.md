@@ -9,11 +9,13 @@
  -CPP
  -Cuda
  -Fortran90
- -Rust
- | -Bin
+  | -Bin
    | exer####.exe
- | -Unit##
+  | -Unit##
    | -Exercise##
      | -Program
      | -Inputs
      | -Outputs
+ -Rust
+
+ ### Note: for Rust, will be using the default file system created by cargo.
