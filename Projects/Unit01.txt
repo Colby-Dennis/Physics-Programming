@@ -1,0 +1,92 @@
+Unit 01: Basic Workflow tools
+The objective of this unit is to get the user familiar with the basics of 
+    handling inputs, outputs, and program structure.
+
+* For each of the following programs, utilize a Makefile to build
+    the executable. 
+
+* Each executable should have the name "exer####" where the first
+    two number are the unit number and the last two are the 
+    exercise number.
+
+* Structure the exercise program as followed within the unit folder
+
+    Unit##
+    | -Exercise##
+      | -Program
+        | <PROGRAM GOES HERE>
+
+01.01: Compiling Programs
+    - Create a program that writes "Hello World!" to the terminal.
+
+01.02: Compiling in other directories
+    - Repeat exercise 01.01 but have the executable be built in the 
+        bin folder.
+    - All executables from this point are expected to be in the bin 
+        folder.
+
+01.03: Reading from a file
+    - Create an input folder called "Inputs" within the exercise 
+        folder.
+    - Create a text file called input.txt.
+    - Put a single decimal number in the input.txt file.
+    - Have the program read from the input.txt file and print out
+        the square of the number in the terminal.
+
+* Folder should now be structured as followed:
+
+    Unit##
+    | -Exercise##
+      | -Program
+      | -Inputs
+
+01.04: Creating and writing to an output file.
+    - Create an output folder within the exercise folder.
+    - Create a file called output.txt.
+    - Repeat exercise 01.03 but write the program output to the 
+        output.txt file.
+    *** CHECK TO SEE WHAT HAPPENS IF THE FILE ALREADY EXISTS.
+        - C++ does ...
+        - Cuda does...
+        - Fortran90 overwrites the old file with the new data.
+        - Rust does ...
+
+* From this point on, each exercise folder is expected to have the
+    following structure.
+
+    Unit##
+    | -Exercise##
+      | -Program
+      | -Inputs
+      | -Outputs
+
+01.05: Labeling and reading multiple inputs from an input file
+    - Create an input file that has the following three input labels
+        and a random number value, here is an example.
+            a, 3.0
+            b, 4.0
+        Note: different languages may need a different structure.
+    - Let the inputs "a" and "b" be the sides of a right triangle. 
+        Have the program print out "c: #.##" in an output file.
+
+01.06: Creating a structured output file
+    - Create a program that creates a table of squares from 1 - 25.
+    - Output the data into a file so that it is structured as the 
+        following:
+            1 1
+            2 4
+            3 9
+    - Create two seperate output files one comma delimited (.csv) and
+        another that is tab delimited (.txt).
+
+01.07: Have the .exe read a user input on execution
+    - Create a program that reads a number from when the program is
+        executed squares it and prints it to an output file.
+
+01.08: Have the program select which input file to use
+    - Create five input files called one.txt, two.txt, etc to 
+        five.txt that each have the titled number inside.
+    - Have the executable take a text input and use the typed input
+        file.
+    - Write the cube of the number to an output file.
+
