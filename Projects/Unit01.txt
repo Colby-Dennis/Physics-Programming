@@ -74,6 +74,7 @@ The objective of this unit is to get the user familiar with the basics of
             3 9
     - Create two seperate output files one comma delimited (.csv) and
         another that is tab delimited (.txt).
+    - Include a label for each column.
 
 01.07: Have the .exe read a user input on execution
     - Create a program that reads a number from when the program is
