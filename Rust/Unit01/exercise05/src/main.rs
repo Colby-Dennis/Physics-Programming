@@ -1,45 +1,32 @@
-use std::fs::File;
-use std::fs;
-use std::io::{self, BufRead};
-use std::path::Path;
+use std::fs::{File, OpenOptions};
+use std::io::{BufRead, BufReader, Write};
+use std::error::Error;
 
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     // Creating an array to save the file inputs
     let mut data_array: [f32; 2] = [0.0;2];
 
-    // reading the file inputs
-    if let Ok(lines) = read_lines("../Unit01/exercise05/Inputs/input.txt") {
-        let mut i = 0;
-        for line in lines {
-            if let Ok(ip) = line {
-                let split = ip.split(", ");
-                let vec: Vec<&str> = split.collect();
-                data_array[i] = vec[1].trim().parse().expect("Check Number");
-                i = i + 1;
-            }
-        }
+    // Reading the file inputs
+    let infile = BufReader::new(File::open("Inputs/input.txt")?);
+    for (line, data) in infile.lines().zip(&mut data_array) {
+        let line = line?;
+        *data = line.split(", ")
+                    .nth(1)
+                    .ok_or("at least 2 comma-seperated fields")?
+                    .trim()
+                    .parse()
+                    .unwrap();
     }
-    
-    // Saving the numbers to variables
-    let a: f32 = data_array[0];
-    let b: f32 = data_array[1];
 
-    // Calculating hypotenuse, saving as string reference
-    let c: &str = &((a*a) + (b*b)).sqrt().to_string();
+    let [a, b] = data_array;
 
-    // Creating the output format
-    let mut result: String = String::from("c: ");
-    result.push_str(c);
-    
     // Writing out hypotenuse to file
-    fs::write("../Unit01/exercise05/Outputs/output.txt", result)
-        .expect("Unable to write to file");
-}
+    let mut outfile = OpenOptions::new()
+        .write(true)
+        .create(true)
+        .open("Outputs/output.txt")?;
 
-// The recommended way to read in by lines from the Rust Cookbook
-// https://doc.rust-lang.org/rust-by-example/std_misc/file/read_lines.html
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where P: AsRef<Path>, {
-    let file = File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
+    write!(outfile, "c: {}", f32::hypot(a,b))?;
+
+    Ok(())
 }
