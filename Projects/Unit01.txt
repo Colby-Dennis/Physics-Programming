@@ -9,12 +9,17 @@ The objective of this unit is to get the user familiar with the basics of
     two number are the unit number and the last two are the 
     exercise number.
 
-* Structure the exercise program as followed within the unit folder
+* Most exercises will have the following folder structure with some 
+    exceptions.
 
     Unit##
     | -Exercise##
       | -src
-        | <PROGRAM GOES HERE>
+        | -program file
+      | -Inputs
+        | -input.txt
+      | -Outputs
+        | output.txt
 
 01.01: Compiling Programs
     - Create a program that writes "Hello World!" to the terminal.
@@ -34,27 +39,11 @@ The objective of this unit is to get the user familiar with the basics of
         the square of the number in the terminal.
     - Verify results with both whole and decimal numbers.
 
-* Folder should now be structured as followed:
-
-    Unit##
-    | -Exercise##
-      | -src
-      | -Inputs
-
 01.04: Creating and writing to an output file.
     - Create an output folder within the exercise folder.
     - Create a file called output.txt.
     - Repeat exercise 01.03 but write the program output to the 
         output.txt file.
-
-* From this point on, each exercise folder is expected to have the
-    following structure.
-
-    Unit##
-    | -Exercise##
-      | -src
-      | -Inputs
-      | -Outputs
 
 01.05: Labeling and reading multiple inputs from an input file
     - Create an input file that has the following three input labels
