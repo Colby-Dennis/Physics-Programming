@@ -7,7 +7,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut data_array: [f32; 8] = [0.0;8];
 
     // Reading the file inputs
-    let infile = BufReader::new(File::open("Inputs/input.txt")?);
+    let infile = BufReader::new(File::open("../Unit02/exercise01/Inputs/input.txt")?);
     for (line, data) in infile.lines().zip(&mut data_array) {
         let line = line?;
         *data = line.split(", ")
@@ -38,7 +38,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut outfile = OpenOptions::new()
         .write(true)
         .create(true)
-        .open("Outputs/output.csv")?;
+        .open("../Unit02/exercise01/Outputs/output.csv")?;
 
     // Euler Method
     while current_time < time {

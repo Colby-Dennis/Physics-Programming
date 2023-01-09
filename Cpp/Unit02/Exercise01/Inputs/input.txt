@@ -5,4 +5,4 @@ length2, 01
 theta1, 0.7
 theta2, -0.3
 deltaTime, 0.01
-time, 5.0
+time, 100.0
