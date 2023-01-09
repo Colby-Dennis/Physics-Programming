@@ -1,0 +1,8 @@
+mass1, 01
+mass2, 01
+length1, 01
+length2, 01
+theta1, 0.7
+theta2, -0.3
+deltaTime, 0.01
+time, 5.0
