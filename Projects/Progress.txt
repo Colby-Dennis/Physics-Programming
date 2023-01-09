@@ -1,4 +1,4 @@
-A file to track my program progess
+A file to track my progess
 
 Unit 01
 
@@ -11,5 +11,5 @@ Unit 01
 |      05    |  X  |    X    |  X   |
 |      06    |  X  |    X    |  X   |
 |      07    |  X  |    X    |  X   |
-|      08    |     |         |      |
+|      08    |  X  |    X    |  X   |
 |      09    |     |         |      |

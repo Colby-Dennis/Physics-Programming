@@ -71,11 +71,11 @@ The objective of this unit is to get the user familiar with the basics of
 
 01.08: Create a "smart" file path system
     - Create a program that requires the user to enter the path to
-        the bin folder.
+        the folder that contains the Inputs and Outputs folders.
     - Use this input to construct the paths to both the input files
         and output files.
-    - Have the program read the input file and print it to an output
-        file.
+    - Have the program read the numbers from the input file and write out
+        both the number and its sqaure in the output file.
 
 01.09: Have the program select which input file to use
     - Create five input files called one.txt, two.txt, etc to 
