@@ -18,6 +18,7 @@ int main() {
     std::ifstream indata;
     indata.open("../Unit01/Exercise03/Inputs/input.txt");
     indata >> num[0];
+    indata.close();
 
     // Squaring the value
     square<<<1,1>>>(num);

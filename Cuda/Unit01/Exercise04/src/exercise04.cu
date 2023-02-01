@@ -21,6 +21,7 @@ int main() {
     ifstream indata;
     indata.open("../Unit01/Exercise04/Inputs/input.txt");
     indata >> num[0];
+    indata.close();
 
     // Squaring the value
     square<<<1,1>>>(num);
@@ -32,6 +33,7 @@ int main() {
     ofstream outdata;
     outdata.open("../Unit01/Exercise04/Outputs/output.txt");
     outdata << num[0];
+    outdata.close();
 
     // Freeint memory
     cudaFree(num);
