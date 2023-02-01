@@ -1,5 +1,7 @@
 bin/
 target/
+.vscode/
 .exe
 .exp
 .lib
+.vscode/settings.json
