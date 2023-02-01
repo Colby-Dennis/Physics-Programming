@@ -33,13 +33,18 @@ int main() {
     cudaDeviceSynchronize();
     
 
-    // Writing out the result
-    ofstream outdata;
-    outdata.open("../Unit01/Exercise06/Outputs/output.txt");
+    // Writing out the result in a tab delimited text file and csv
+    ofstream outdataTab, outdataCsv;
+    outdataTab.open("../Unit01/Exercise06/Outputs/output.txt");
+    outdataCsv.open("../Unit01/Exercise06/Outputs/output.csv");
+    outdataTab << "Number \t Square" << endl;
+    outdataCsv << "Number,Square" << endl;
     for (int i = 0; i < n; i++) {
-        outdata << x[i] << " " << y[i] << endl;
+        outdataTab << x[i] << "\t" << y[i] << endl;
+        outdataCsv << x[i] << "," << y[i] << endl;
     }
-    outdata.close();
+    outdataTab.close();
+    outdataCsv.close();
 
     // Free memory
     cudaFree(x);
