@@ -2,21 +2,21 @@ A file to track my progess
 
 Unit 01
 
-|Exercise ## | C++ | Fortran | Rust |
--------------------------------------
-|      01    |  X  |    X    |  X   |
-|      02    |  X  |    X    |  X   |
-|      03    |  X  |    X    |  X   |
-|      04    |  X  |    X    |  X   |
-|      05    |  X  |    X    |  X   |
-|      06    |  X  |    X    |  X   |
-|      07    |  X  |    X    |  X   |
-|      08    |  X  |    X    |  X   |
-|      09    |  X  |    X    |  X   |
+|Exercise ## | C++ | Fortran | Rust | Cuda |
+--------------------------------------------
+|      01    |  X  |    X    |  X   |  X   |
+|      02    |  X  |    X    |  X   |      |
+|      03    |  X  |    X    |  X   |      |
+|      04    |  X  |    X    |  X   |      |
+|      05    |  X  |    X    |  X   |      |
+|      06    |  X  |    X    |  X   |      |
+|      07    |  X  |    X    |  X   |      |
+|      08    |  X  |    X    |  X   |      |
+|      09    |  X  |    X    |  X   |      |
 
 Unit 02
 
-|Exercise ## | C++ | Fortran | Rust |
--------------------------------------
-|      01    |  X  |    X    |  X   |
-|      02    |     |         |      |
+|Exercise ## | C++ | Fortran | Rust | Cuda |
+--------------------------------------------
+|      01    |  X  |    X    |  X   |      |
+|      02    |     |         |      |      |
