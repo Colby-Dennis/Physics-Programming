@@ -1,2 +1,2 @@
 all:
-	nvcc src/exercise02.cu -o ../../bin/exercise02.exe
+	nvcc src/exercise02.cu -o ../../bin/exer0102.exe
