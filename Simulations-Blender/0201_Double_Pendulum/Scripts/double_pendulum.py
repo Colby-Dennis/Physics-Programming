@@ -13,6 +13,7 @@ The script is designed to be run from within the double_pendulum.blend file
 import csv
 from array import *
 import bpy
+import math
 
 # Setting the scale and height of the pendulum
 scale = 5
@@ -50,15 +51,36 @@ for i in range(len(pendulum)):
 # Pendulum array now contains data, need to add spheres to environment in blender.
 
 # Getting and setting the objects in the animation
+# Objects were already created and labeled
 pendulumOne = bpy.data.objects['PendulumOne']
 pendulumTwo = bpy.data.objects['PendulumTwo']
+stringOne = bpy.data.objects['StringOne']
+stringTwo = bpy.data.objects['StringTwo']
 
 # Only update y and z positions, pendulum will stay at 0.0 in x.
-# Setting the frame positions
+# Setting the frame positions (key frames start at 1 instead of 0)
 for i in range(len(pendulum)):
+    # Updating mass positions
+    # Mass one
     pendulumOne.location = (0.0, pendulum[i][1], pendulum[i][2])
-    pendulumTwo.location = (0.0, pendulum[i][3], pendulum[i][4])
     pendulumOne.keyframe_insert(data_path="location", frame=i+1)
+    # Mass two
+    pendulumTwo.location = (0.0, pendulum[i][3], pendulum[i][4])
     pendulumTwo.keyframe_insert(data_path="location", frame=i+1)
+    
+    # Updating sting positions
+    # First String 
+    x = pendulum[i][1]/2.0
+    y = (height + pendulum[i][2])/2.0
+    stringOne.location = (0.0, x, y)
+    stringOne.keyframe_insert(data_path="location", frame=i+1)
+    
+    # Second String
+    x = (pendulum[i][3] + pendulum[i][1])/2.0
+    y = (pendulum[i][2]+pendulum[i][4])/2.0
+    stringTwo.location = (0.0, x, y)
+    stringTwo.keyframe_insert(data_path="location", frame=i+1)
+    
+    # Updating strang rotations
 
 # Animation should now be done.
