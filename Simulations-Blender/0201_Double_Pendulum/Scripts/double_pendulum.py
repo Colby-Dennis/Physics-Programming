@@ -22,7 +22,8 @@ height = 13
 # Working path to directory
 # Laptop:
 path = "C:/Users/Colby/OneDrive/Documents/GitHub/Physics-Programming/Simulations-Blender/0201_Double_Pendulum/"
-
+# Desktop
+path = "C:/Users/ncolb/OneDrive/Documents/GitHub/Physics-Programming/Simulations-Blender/0201_Double_Pendulum/"
 
 # Arrays to hold pendulum data
 pendulum = []
