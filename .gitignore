@@ -1,7 +1,8 @@
 bin/
 target/
-.exe
-.exp
-.lib
-.png
+*.exe
+*.exp
+*.lib
+*.png
+*.mp4
 settings.json
