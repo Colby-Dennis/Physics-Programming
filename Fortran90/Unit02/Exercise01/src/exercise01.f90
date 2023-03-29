@@ -6,6 +6,7 @@ program exercise01
     real :: g, a1Dot, a2Dot, a1DotDot, a2DotDot, currentTime
     real :: x1, y1, x2, y2
     real :: num1, num2, num3, num4, denominator
+    integer :: timeMultiplier
 
     ! Getting file paths
     inputPath = "../Unit02/Exercise01/Inputs/input.txt"
@@ -19,8 +20,8 @@ program exercise01
     read(1,*) str, l2
     read(1,*) str, a1
     read(1,*) str, a2
-    read(1,*) str, dt
     read(1,*) str, time
+    read(1,*) str, timeMultiplier
     close(1)
 
     ! Setting internal values
@@ -28,6 +29,7 @@ program exercise01
     a1Dot = 0.0
     a2Dot = 0.0
     currentTime = 0.0
+    dt = (1.0/24.0)*(1.0/real(timeMultiplier))
 
     ! Opening file to output code
     open(1, file=outputPath)
