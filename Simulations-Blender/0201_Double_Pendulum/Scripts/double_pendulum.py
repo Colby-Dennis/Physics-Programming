@@ -21,7 +21,7 @@ height = 13
 
 # Working path to directory
 # Laptop:
-path = "C:/Users/Colby/OneDrive/Documents/GitHub/Physics-Programming/Simulations-Blender/0201_Double_Pendulum/"
+# path = "C:/Users/Colby/OneDrive/Documents/GitHub/Physics-Programming/Simulations-Blender/0201_Double_Pendulum/"
 # Desktop
 path = "C:/Users/ncolb/OneDrive/Documents/GitHub/Physics-Programming/Simulations-Blender/0201_Double_Pendulum/"
 
@@ -58,6 +58,16 @@ pendulumTwo = bpy.data.objects['PendulumTwo']
 stringOne = bpy.data.objects['StringOne']
 stringTwo = bpy.data.objects['StringTwo']
 
+# Setting the rotation of the strings to zero
+stringOne.rotation_mode = "XYZ"
+stringOne.rotation_euler.x = 0
+stringOne.rotation_euler.y = 0
+stringOne.rotation_euler.z = 0
+stringTwo.rotation_mode = "XYZ"
+stringTwo.rotation_euler.x = 0
+stringTwo.rotation_euler.y = 0
+stringTwo.rotation_euler.z = 0
+
 # Only update y and z positions, pendulum will stay at 0.0 in x.
 # Setting the frame positions (key frames start at 1 instead of 0)
 for i in range(len(pendulum)):
@@ -82,6 +92,17 @@ for i in range(len(pendulum)):
     stringTwo.location = (0.0, x, y)
     stringTwo.keyframe_insert(data_path="location", frame=i+1)
     
-    # Updating strang rotations
+    # Updating string rotations
+    # First string
+    x = pendulum[i][1]
+    y = height - pendulum[i][2]
+    stringOne.rotation_euler.x = -math.atan(y/x) + math.pi/2
+    stringOne.keyframe_insert("rotation_euler",frame=i+1)
+    
+    # Second string
+    x = pendulum[i][3] - pendulum[i][1]
+    y = pendulum[i][2] - pendulum[i][4]
+    stringTwo.rotation_euler.x = -math.atan(y/x) + math.pi/2
+    stringTwo.keyframe_insert("rotation_euler",frame=i+1)
 
 # Animation should now be done.
