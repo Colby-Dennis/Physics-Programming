@@ -1,0 +1,3 @@
+Overview of Unit
+
+John David Jackson's Classical Electrodynamics (third edition) is a standard (if not the standard) text for a graduate electrodynamics course. While the results to the problems of the book are analytical, we will use this oppurtunity to program a variety of algorithms to solve the same problems numerically. 
